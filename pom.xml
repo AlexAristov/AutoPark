@@ -6,25 +6,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - AutoPark</name>
   <url>http://maven.apache.org</url>
+
   <properties>
     <testcontainersVersion>1.19.8</testcontainersVersion>
     <JUnitVersion>5.10.1</JUnitVersion>
   </properties>
 
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>16</source>
-                    <target>16</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <packaging>war</packaging>
+  <packaging>war</packaging>
 
   <dependencies>
     <dependency>
@@ -116,7 +104,23 @@
           <version>3.26.0</version>
           <scope>test</scope>
       </dependency>
-
-
   </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
