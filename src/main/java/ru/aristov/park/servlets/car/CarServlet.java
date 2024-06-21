@@ -36,7 +36,8 @@ public class CarServlet extends HttpServlet {
 
         List<Car> cars = carService.getAll();
 
-        writer.write(objectMapper.writeValueAsString(CarDTO.fromEntities(cars)));
+//        writer.write(objectMapper.writeValueAsString(CarDTO.fromEntities(cars)));
+        writer.write("Hello");
     }
 
     @Override
